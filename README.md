@@ -2,7 +2,7 @@
 
 Thanks for the [OpenPCDet](https://github.com/open-mmlab/OpenPCDet), this implementation of the CT3D is mainly based on the pcdet v0.3. Our paper can be downloaded here [ICCV2021](https://arxiv.org/abs/2108.10723). 
 
-![CT3D](C:\Users\poplar\Desktop\CT3D.jpg) Overview of CT3D. The raw points are first fed into the RPN for generating 3D proposals. Then the raw points along with the corresponding proposals are processed by the channel-wise Transformer composed of the proposal-to-point encoding module and the channel-wise decoding module. Specifically, the proposal-to-point encoding module is to modulate each point feature with global proposal-aware context information. After that, the encoded point features  are transformed into an effective proposal feature representation by the channel-wise decoding module for confidence prediction and box regression.
+![CT3D](IMG/CT3D.jpg) Overview of CT3D. The raw points are first fed into the RPN for generating 3D proposals. Then the raw points along with the corresponding proposals are processed by the channel-wise Transformer composed of the proposal-to-point encoding module and the channel-wise decoding module. Specifically, the proposal-to-point encoding module is to modulate each point feature with global proposal-aware context information. After that, the encoded point features  are transformed into an effective proposal feature representation by the channel-wise decoding module for confidence prediction and box regression.
 
 |                         | AP@R11 | AP@R40 |                           Download                           |
 | :---------------------: | :----: | :----: | :----------------------------------------------------------: |
