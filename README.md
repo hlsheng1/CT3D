@@ -1,6 +1,15 @@
 ## "Improving 3D Object Detection with Channel-wise Transformer"
 
-Thanks for the [OpenPCDet](https://github.com/open-mmlab/OpenPCDet), this implementation of the CT3D is mainly based on the pcdet v0.3. Our paper can be downloaded here [ICCV2021](https://arxiv.org/abs/2108.10723). The pretrained model on KITTI train set can be found [here](https://drive.google.com/file/d/1ZWybnLJIzN4d8QBtctRJHd03sW51nrJa/view?usp=sharing).
+Thanks for the [OpenPCDet](https://github.com/open-mmlab/OpenPCDet), this implementation of the CT3D is mainly based on the pcdet v0.3. Our paper can be downloaded here [ICCV2021](https://arxiv.org/abs/2108.10723). 
+
+![CT3D](C:\Users\poplar\Desktop\CT3D.jpg) Overview of CT3D. The raw points are first fed into the RPN for generating 3D proposals. Then the raw points along with the corresponding proposals are processed by the channel-wise Transformer composed of the proposal-to-point encoding module and the channel-wise decoding module. Specifically, the proposal-to-point encoding module is to modulate each point feature with global proposal-aware context information. After that, the encoded point features  are transformed into an effective proposal feature representation by the channel-wise decoding module for confidence prediction and box regression.
+
+|                         | AP@R11 | AP@R40 |                           Download                           |
+| :---------------------: | :----: | :----: | :----------------------------------------------------------: |
+|        Only Car         | 86.06  | 85.79  | [model-car](https://drive.google.com/file/d/1ZWybnLJIzN4d8QBtctRJHd03sW51nrJa/view?usp=sharing) |
+|    3-Category (Car)     | 85.04  | 84.97  | [model-3cat](https://drive.google.com/file/d/1lTSoWd4XzeG6FkDY-Sd-1_HgNgHqdHsl/view?usp=sharing) |
+| 3-Category (Pedestrian) | 56.28  | 55.58  |                              -                               |
+|  3-Category (Cyclist)   | 71.71  | 71.88  |                              -                               |
 
 ### 1. Recommended Environment
 

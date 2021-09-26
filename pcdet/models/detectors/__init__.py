@@ -1,9 +1,12 @@
 from .detector3d_template import Detector3DTemplate
 from .CT3D import CT3D
+from .CT3D_3CAT import CT3D_3CAT
+
 
 __all__ = {
     'Detector3DTemplate': Detector3DTemplate,
-    'CT3D': CT3D
+    'CT3D': CT3D,
+    "CT3D_3CAT": CT3D_3CAT
 }
 
 def build_detector(model_cfg, num_class, dataset):
