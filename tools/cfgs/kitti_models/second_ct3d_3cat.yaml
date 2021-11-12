@@ -133,12 +133,9 @@ MODEL:
                 NMS_POST_MAXSIZE: 100  # 100
                 NMS_THRESH: 0.7   # 0.7
         
-                position_embedding: sine
                 
         Transformer:
-            # position_embedding: sine
-            num_classes: 1
-            num_dir_cls: 2
+            num_points: 256
             enc_layers: 3
             dec_layers: 1
             dim_feedforward: 512

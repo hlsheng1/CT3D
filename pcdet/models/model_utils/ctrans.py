@@ -218,8 +218,8 @@ class MultiHeadedAttention(nn.Module):
         assert d_model % num_heads == 0
         self.dim = d_model // num_heads
         self.num_heads = num_heads
-        self.merge = nn.Conv1d(d_model, d_model, kernel_size=1)
-        self.proj = nn.ModuleList([deepcopy(self.merge) for _ in range(3)])
+        merge = nn.Conv1d(d_model, d_model, kernel_size=1)
+        self.proj = nn.ModuleList([deepcopy(merge) for _ in range(3)])
         self.down_mlp = MLP(input_dim = self.dim, hidden_dim = 32, output_dim = 1, num_layers = 1)
 
 
